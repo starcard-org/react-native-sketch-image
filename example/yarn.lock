@@ -920,7 +920,7 @@
     lodash "^4.17.5"
     to-fast-properties "^2.0.0"
 
-"@wwimmo/react-native-sketch-canvas@file:..":
+"@starcard-org/react-native-sketch-canvas@file:..":
   version "0.8.0"
 
 abab@^2.0.0:

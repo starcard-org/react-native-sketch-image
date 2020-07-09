@@ -17,8 +17,8 @@ import {
 } from 'react-native';
 import { RNCamera } from 'react-native-camera';
 
-import RNImageEditor from '@wwimmo/react-native-sketch-canvas';
-import { ImageEditor } from '@wwimmo/react-native-sketch-canvas';
+import RNSketchImageEditor from '@starcard-org/react-native-sketch-canvas';
+import { SketchImageEditor } from '@starcard-org/react-native-sketch-canvas';
 
 export default class example extends Component {
   constructor(props) {
@@ -99,7 +99,7 @@ export default class example extends Component {
         {
           this.state.example === 1 &&
           <View style={{ flex: 1, flexDirection: 'row' }}>
-            <RNImageEditor
+            <RNSketchImageEditor
               ref={(ref) => {
                 this.canvas = ref
               }}
@@ -154,7 +154,7 @@ export default class example extends Component {
               saveComponent={<View style={styles.functionButton}><Text style={{ color: 'white' }}>Save</Text></View>}
               savePreference={() => {
                 return {
-                  folder: "RNImageEditor",
+                  folder: "RNSketchImageEditor",
                   filename: String(Math.ceil(Math.random() * 100000000)),
                   transparent: false,
                   imageType: "png"
@@ -197,9 +197,9 @@ export default class example extends Component {
                   </TouchableOpacity>
                 </View>
               </View>
-              <ImageEditor
-                localSourceImage={{ filename: 'whale.png', directory: ImageEditor.MAIN_BUNDLE, mode: 'AspectFit' }}
-                // localSourceImage={{ filename: 'bulb.png', directory: RNImageEditor.MAIN_BUNDLE }}
+              <SketchImageEditor
+                localSourceImage={{ filename: 'whale.png', directory: SketchImageEditor.MAIN_BUNDLE, mode: 'AspectFit' }}
+                // localSourceImage={{ filename: 'bulb.png', directory: RNSketchImageEditor.MAIN_BUNDLE }}
                 ref={ref => this.canvas = ref}
                 style={{ flex: 1 }}
                 strokeColor={this.state.color}
@@ -250,7 +250,7 @@ export default class example extends Component {
         {
           this.state.example === 3 &&
           <View style={{ flex: 1, flexDirection: 'column' }}>
-            <RNImageEditor
+            <RNSketchImageEditor
               ref={ref => this.canvas1 = ref}
               user={'user1'}
               containerStyle={{ backgroundColor: 'transparent', flex: 1 }}
@@ -292,7 +292,7 @@ export default class example extends Component {
               saveComponent={<View style={styles.functionButton}><Text style={{ color: 'white' }}>Save</Text></View>}
               savePreference={() => {
                 return {
-                  folder: 'RNImageEditor',
+                  folder: 'RNSketchImageEditor',
                   filename: String(Math.ceil(Math.random() * 100000000)),
                   transparent: true,
                   imageType: 'jpg'
@@ -308,7 +308,7 @@ export default class example extends Component {
                 console.log('pathsCount(user1)', pathsCount)
               }}
             />
-            <RNImageEditor
+            <RNSketchImageEditor
               ref={ref => this.canvas2 = ref}
               user={'user2'}
               containerStyle={{ backgroundColor: 'transparent', flex: 1 }}
@@ -346,7 +346,7 @@ export default class example extends Component {
               saveComponent={<View style={styles.functionButton}><Text style={{ color: 'white' }}>Save</Text></View>}
               savePreference={() => {
                 return {
-                  folder: 'RNImageEditor',
+                  folder: 'RNSketchImageEditor',
                   filename: String(Math.ceil(Math.random() * 100000000)),
                   transparent: true,
                   imageType: 'jpg'
@@ -390,7 +390,7 @@ export default class example extends Component {
             </View>
             :
             <View style={{ flex: 1, flexDirection: 'row' }}>
-              <RNImageEditor
+              <RNSketchImageEditor
                 localSourceImage={{ filename: this.state.photoPath, directory: null, mode: 'AspectFit' }}
                 containerStyle={{ backgroundColor: 'transparent', flex: 1 }}
                 canvasStyle={{ backgroundColor: 'transparent', flex: 1 }}
@@ -431,7 +431,7 @@ export default class example extends Component {
                 saveComponent={<View style={styles.functionButton}><Text style={{ color: 'white' }}>Save</Text></View>}
                 savePreference={() => {
                   return {
-                    folder: 'RNImageEditor',
+                    folder: 'RNSketchImageEditor',
                     filename: String(Math.ceil(Math.random() * 100000000)),
                     transparent: false,
                     imageType: 'png'
@@ -450,9 +450,9 @@ export default class example extends Component {
         {
           this.state.example === 5 &&
           <View style={{ flex: 1, flexDirection: 'row' }}>
-            <RNImageEditor
-              localSourceImage={{ filename: 'whale.png', directory: ImageEditor.MAIN_BUNDLE, mode: 'AspectFit' }}
-              // localSourceImage={{ filename: 'bulb.png', directory: RNImageEditor.MAIN_BUNDLE }}
+            <RNSketchImageEditor
+              localSourceImage={{ filename: 'whale.png', directory: SketchImageEditor.MAIN_BUNDLE, mode: 'AspectFit' }}
+              // localSourceImage={{ filename: 'bulb.png', directory: RNSketchImageEditor.MAIN_BUNDLE }}
               containerStyle={{ backgroundColor: 'transparent', flex: 1 }}
               canvasStyle={{ backgroundColor: 'transparent', flex: 1 }}
               onStrokeEnd={data => {
@@ -492,7 +492,7 @@ export default class example extends Component {
               saveComponent={<View style={styles.functionButton}><Text style={{ color: 'white' }}>Save</Text></View>}
               savePreference={() => {
                 return {
-                  folder: 'RNImageEditor',
+                  folder: 'RNSketchImageEditor',
                   filename: String(Math.ceil(Math.random() * 100000000)),
                   transparent: false,
                   includeImage: false,
@@ -513,7 +513,7 @@ export default class example extends Component {
         {
           this.state.example === 6 &&
           <View style={{ flex: 1, flexDirection: 'row' }}>
-            <RNImageEditor
+            <RNSketchImageEditor
               text={[
                 { text: 'Welcome to my GitHub', font: 'fonts/IndieFlower.ttf', fontSize: 30, position: { x: 0, y: 0 }, anchor: { x: 0, y: 0 }, coordinate: 'Absolute', fontColor: 'red' },
                 { text: 'Center\nMULTILINE', fontSize: 25, position: { x: 0.5, y: 0.5 }, anchor: { x: 0.5, y: 0.5 }, coordinate: 'Ratio', overlay: 'SketchOnText', fontColor: 'black', alignment: 'Center', lineHeightMultiple: 1 },
@@ -559,7 +559,7 @@ export default class example extends Component {
               saveComponent={<View style={styles.functionButton}><Text style={{ color: 'white' }}>Save</Text></View>}
               savePreference={() => {
                 return {
-                  folder: 'RNImageEditor',
+                  folder: 'RNSketchImageEditor',
                   filename: String(Math.ceil(Math.random() * 100000000)),
                   transparent: false,
                   includeImage: false,
@@ -587,29 +587,29 @@ export default class example extends Component {
               <TouchableOpacity onPress={() => this.setState({ example: 0 })}>
                 <Text>Close</Text>
               </TouchableOpacity>
-              <ImageEditor
+              <SketchImageEditor
                 text={[
                   { text: 'Page 1', position: { x: 20, y: 20 }, fontSize: Platform.select({ ios: 24, android: 48 }) },
                   { text: 'Signature', font: Platform.select({ ios: 'Zapfino', android: 'fonts/IndieFlower.ttf' }), position: { x: 20, y: 220 }, fontSize: Platform.select({ ios: 24, android: 48 }), fontColor: 'red' }
                 ]}
-                localSourceImage={{ filename: 'whale.png', directory: ImageEditor.MAIN_BUNDLE, mode: 'AspectFit' }}
+                localSourceImage={{ filename: 'whale.png', directory: SketchImageEditor.MAIN_BUNDLE, mode: 'AspectFit' }}
                 style={styles.page}
                 onStrokeStart={() => this.setState({ scrollEnabled: false })}
                 onStrokeEnd={() => this.setState({ scrollEnabled: true })}
               />
-              <ImageEditor
+              <SketchImageEditor
                 text={[{ text: 'Page 2', position: { x: 0.95, y: 0.05 }, anchor: { x: 1, y: 0 }, coordinate: 'Ratio', fontSize: Platform.select({ ios: 24, android: 48 }) }]}
                 style={styles.page}
                 onStrokeStart={() => this.setState({ scrollEnabled: false })}
                 onStrokeEnd={() => this.setState({ scrollEnabled: true })}
               />
-              <ImageEditor
+              <SketchImageEditor
                 text={[{ text: 'Page 3', position: { x: 0.5, y: 0.95 }, anchor: { x: 0.5, y: 1 }, coordinate: 'Ratio', fontSize: Platform.select({ ios: 24, android: 48 }) }]}
                 style={styles.page}
                 onStrokeStart={() => this.setState({ scrollEnabled: false })}
                 onStrokeEnd={() => this.setState({ scrollEnabled: true })}
               />
-              <ImageEditor
+              <SketchImageEditor
                 text={[{ text: 'Page 4', position: { x: 20, y: 20 }, fontSize: Platform.select({ ios: 24, android: 48 }) }]}
                 style={styles.page}
                 onStrokeStart={() => this.setState({ scrollEnabled: false })}

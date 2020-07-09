@@ -1,0 +1,356 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8579D13721889DE500773C27 /* TextEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8579D13621889DE500773C27 /* TextEntity.m */; };
+		858EE6372180DFBD009C9E08 /* CircleEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 858EE6362180DFBD009C9E08 /* CircleEntity.m */; };
+		85C9F6F2218879DB00BD64B4 /* RectEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F6F1218879DB00BD64B4 /* RectEntity.m */; };
+		85C9F6F5218885F400BD64B4 /* TriangleEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F6F4218885F400BD64B4 /* TriangleEntity.m */; };
+		85E432F5218892CD00FDDA74 /* ArrowEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E432F4218892CD00FDDA74 /* ArrowEntity.m */; };
+		D70446F6229682C5007BBE77 /* BackgroundText.m in Sources */ = {isa = PBXBuildFile; fileRef = D70446F5229682C5007BBE77 /* BackgroundText.m */; };
+		D7BC84182180814600A275D3 /* MotionEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BC84172180814600A275D3 /* MotionEntity.m */; };
+		DE0C99801F32D596001BDE8B /* RNSketchImageEditorData.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0C997F1F32D596001BDE8B /* RNSketchImageEditorData.m */; };
+		DEB694891F322F2A00DC6841 /* RNSketchImageEditorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB694861F322F2A00DC6841 /* RNSketchImageEditorManager.m */; };
+		DED3A13720A4159A00D72FBF /* RNSketchImageEditorUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = DED3A13520A4159A00D72FBF /* RNSketchImageEditorUtility.m */; };
+		DEFBA25D1F322B6000A4545C /* RNSketchImageEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFBA25C1F322B6000A4545C /* RNSketchImageEditor.m */; };
+		DEFBA25E1F322B6000A4545C /* RNSketchImageEditor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DEFBA25B1F322B6000A4545C /* RNSketchImageEditor.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DEFBA2561F322B5F00A4545C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				DEFBA25E1F322B6000A4545C /* RNSketchImageEditor.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8579D13521889D4800773C27 /* TextEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextEntity.h; sourceTree = "<group>"; };
+		8579D13621889DE500773C27 /* TextEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextEntity.m; sourceTree = "<group>"; };
+		858EE6312180DEC5009C9E08 /* CircleEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleEntity.h; sourceTree = "<group>"; };
+		858EE6362180DFBD009C9E08 /* CircleEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleEntity.m; sourceTree = "<group>"; };
+		85C9F6F0218878DB00BD64B4 /* RectEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RectEntity.h; sourceTree = "<group>"; };
+		85C9F6F1218879DB00BD64B4 /* RectEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RectEntity.m; sourceTree = "<group>"; };
+		85C9F6F3218885C600BD64B4 /* TriangleEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TriangleEntity.h; sourceTree = "<group>"; };
+		85C9F6F4218885F400BD64B4 /* TriangleEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TriangleEntity.m; sourceTree = "<group>"; };
+		85E432F3218892AE00FDDA74 /* ArrowEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrowEntity.h; sourceTree = "<group>"; };
+		85E432F4218892CD00FDDA74 /* ArrowEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrowEntity.m; sourceTree = "<group>"; };
+		D70446F422968240007BBE77 /* BackgroundText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackgroundText.h; sourceTree = "<group>"; };
+		D70446F5229682C5007BBE77 /* BackgroundText.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackgroundText.m; sourceTree = "<group>"; };
+		D7B7D3E1217DE92C00902B8C /* Enumerations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enumerations.h; sourceTree = "<group>"; };
+		D7BC8411217F4FE600A275D3 /* MotionEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MotionEntity.h; sourceTree = "<group>"; };
+		D7BC84172180814600A275D3 /* MotionEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MotionEntity.m; sourceTree = "<group>"; };
+		DE0C997E1F32D596001BDE8B /* RNSketchImageEditorData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSketchImageEditorData.h; sourceTree = "<group>"; };
+		DE0C997F1F32D596001BDE8B /* RNSketchImageEditorData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSketchImageEditorData.m; sourceTree = "<group>"; };
+		DEB694851F322F2A00DC6841 /* RNSketchImageEditorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSketchImageEditorManager.h; sourceTree = "<group>"; };
+		DEB694861F322F2A00DC6841 /* RNSketchImageEditorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSketchImageEditorManager.m; sourceTree = "<group>"; };
+		DED3A13520A4159A00D72FBF /* RNSketchImageEditorUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSketchImageEditorUtility.m; sourceTree = "<group>"; };
+		DED3A13620A4159A00D72FBF /* RNSketchImageEditorUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSketchImageEditorUtility.h; sourceTree = "<group>"; };
+		DEFBA2581F322B6000A4545C /* libRNSketchImageEditor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNSketchImageEditor.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEFBA25B1F322B6000A4545C /* RNSketchImageEditor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNSketchImageEditor.h; sourceTree = "<group>"; };
+		DEFBA25C1F322B6000A4545C /* RNSketchImageEditor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNSketchImageEditor.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DEFBA2551F322B5F00A4545C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		85C9F6F6218890F700BD64B4 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				D7B7D3E1217DE92C00902B8C /* Enumerations.h */,
+				D7BC8411217F4FE600A275D3 /* MotionEntity.h */,
+				D7BC84172180814600A275D3 /* MotionEntity.m */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		D7B7D3E0217DE80400902B8C /* entities */ = {
+			isa = PBXGroup;
+			children = (
+				85C9F6F6218890F700BD64B4 /* base */,
+				858EE6312180DEC5009C9E08 /* CircleEntity.h */,
+				858EE6362180DFBD009C9E08 /* CircleEntity.m */,
+				85C9F6F0218878DB00BD64B4 /* RectEntity.h */,
+				85C9F6F1218879DB00BD64B4 /* RectEntity.m */,
+				85C9F6F3218885C600BD64B4 /* TriangleEntity.h */,
+				85C9F6F4218885F400BD64B4 /* TriangleEntity.m */,
+				85E432F3218892AE00FDDA74 /* ArrowEntity.h */,
+				85E432F4218892CD00FDDA74 /* ArrowEntity.m */,
+				8579D13521889D4800773C27 /* TextEntity.h */,
+				8579D13621889DE500773C27 /* TextEntity.m */,
+			);
+			path = entities;
+			sourceTree = "<group>";
+		};
+		DEFBA24F1F322B5F00A4545C = {
+			isa = PBXGroup;
+			children = (
+				DEFBA25A1F322B6000A4545C /* RNSketchImageEditor */,
+				DEFBA2591F322B6000A4545C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DEFBA2591F322B6000A4545C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DEFBA2581F322B6000A4545C /* libRNSketchImageEditor.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DEFBA25A1F322B6000A4545C /* RNSketchImageEditor */ = {
+			isa = PBXGroup;
+			children = (
+				D7B7D3E0217DE80400902B8C /* entities */,
+				DEB694851F322F2A00DC6841 /* RNSketchImageEditorManager.h */,
+				DEB694861F322F2A00DC6841 /* RNSketchImageEditorManager.m */,
+				DEFBA25B1F322B6000A4545C /* RNSketchImageEditor.h */,
+				DEFBA25C1F322B6000A4545C /* RNSketchImageEditor.m */,
+				DE0C997E1F32D596001BDE8B /* RNSketchImageEditorData.h */,
+				DE0C997F1F32D596001BDE8B /* RNSketchImageEditorData.m */,
+				DED3A13620A4159A00D72FBF /* RNSketchImageEditorUtility.h */,
+				DED3A13520A4159A00D72FBF /* RNSketchImageEditorUtility.m */,
+				D70446F422968240007BBE77 /* BackgroundText.h */,
+				D70446F5229682C5007BBE77 /* BackgroundText.m */,
+			);
+			path = RNSketchImageEditor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DEFBA2571F322B5F00A4545C /* RNSketchImageEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEFBA2611F322B6000A4545C /* Build configuration list for PBXNativeTarget "RNSketchImageEditor" */;
+			buildPhases = (
+				DEFBA2541F322B5F00A4545C /* Sources */,
+				DEFBA2551F322B5F00A4545C /* Frameworks */,
+				DEFBA2561F322B5F00A4545C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNSketchImageEditor;
+			productName = RNSketchCanvas;
+			productReference = DEFBA2581F322B6000A4545C /* libRNSketchImageEditor.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DEFBA2501F322B5F00A4545C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Terry;
+				TargetAttributes = {
+					DEFBA2571F322B5F00A4545C = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DEFBA2531F322B5F00A4545C /* Build configuration list for PBXProject "RNSketchImageEditor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+			);
+			mainGroup = DEFBA24F1F322B5F00A4545C;
+			productRefGroup = DEFBA2591F322B6000A4545C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DEFBA2571F322B5F00A4545C /* RNSketchImageEditor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DEFBA2541F322B5F00A4545C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEFBA25D1F322B6000A4545C /* RNSketchImageEditor.m in Sources */,
+				8579D13721889DE500773C27 /* TextEntity.m in Sources */,
+				DED3A13720A4159A00D72FBF /* RNSketchImageEditorUtility.m in Sources */,
+				85C9F6F2218879DB00BD64B4 /* RectEntity.m in Sources */,
+				DE0C99801F32D596001BDE8B /* RNSketchImageEditorData.m in Sources */,
+				D70446F6229682C5007BBE77 /* BackgroundText.m in Sources */,
+				D7BC84182180814600A275D3 /* MotionEntity.m in Sources */,
+				858EE6372180DFBD009C9E08 /* CircleEntity.m in Sources */,
+				85E432F5218892CD00FDDA74 /* ArrowEntity.m in Sources */,
+				85C9F6F5218885F400BD64B4 /* TriangleEntity.m in Sources */,
+				DEB694891F322F2A00DC6841 /* RNSketchImageEditorManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DEFBA25F1F322B6000A4545C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DEFBA2601F322B6000A4545C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DEFBA2621F322B6000A4545C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../react-native/React/**";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DEFBA2631F322B6000A4545C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../react-native/React/**";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DEFBA2531F322B5F00A4545C /* Build configuration list for PBXProject "RNSketchImageEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEFBA25F1F322B6000A4545C /* Debug */,
+				DEFBA2601F322B6000A4545C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEFBA2611F322B6000A4545C /* Build configuration list for PBXNativeTarget "RNSketchImageEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEFBA2621F322B6000A4545C /* Debug */,
+				DEFBA2631F322B6000A4545C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DEFBA2501F322B5F00A4545C /* Project object */;
+}

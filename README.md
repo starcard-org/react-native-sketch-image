@@ -46,11 +46,11 @@ Features
 -------------
 Install with yarn
 ```bash
-yarn add https://github.com/wwimmo/react-native-sketch-canvas.git
+yarn add https://github.com/starcard-org/react-native-sketch-canvas.git
 ```
 Link native code (only required for RN below 0.60)
 ```bash
-react-native link @wwimmo/react-native-sketch-canvas
+react-native link @starcard-org/react-native-sketch-canvas
 ```
 
 ## Usage
@@ -66,14 +66,14 @@ import {
   View,
 } from 'react-native';
 
-import { ImageEditor } from '@wwimmo/react-native-sketch-canvas';
+import { SketchImageEditor } from '@starcard-org/react-native-sketch-canvas';
 
 export default class example extends Component {
   render() {
     return (
       <View style={styles.container}>
         <View style={{ flex: 1, flexDirection: 'row' }}>
-          <ImageEditor
+          <SketchImageEditor
             style={{ flex: 1 }}
             strokeColor={'red'}
             strokeWidth={7}
@@ -146,14 +146,14 @@ import {
   Alert,
 } from 'react-native';
 
-import RNImageEditor from '@wwimmo/react-native-sketch-canvas';
+import RNSketchImageEditor from '@starcard-org/react-native-sketch-canvas';
 
 export default class example extends Component {
   render() {
     return (
       <View style={styles.container}>
         <View style={{ flex: 1, flexDirection: 'row' }}>
-          <RNImageEditor
+          <RNSketchImageEditor
             containerStyle={{ backgroundColor: 'transparent', flex: 1 }}
             canvasStyle={{ backgroundColor: 'transparent', flex: 1 }}
             defaultStrokeIndex={0}
@@ -181,7 +181,7 @@ export default class example extends Component {
             saveComponent={<View style={styles.functionButton}><Text style={{color: 'white'}}>Save</Text></View>}
             savePreference={() => {
               return {
-                folder: 'RNImageEditor',
+                folder: 'RNSketchImageEditor',
                 filename: String(Math.ceil(Math.random() * 100000000)),
                 transparent: false,
                 imageType: 'png'
@@ -279,7 +279,7 @@ Note: Because native module cannot read the file in JS bundle, file path cannot 
   * iOS:
     1. Open Xcode and add images to project by right clicking `Add Files to [YOUR PROJECT NAME]`.
     2. Set `filename` to the name of image files with file extension. 
-    3. Set `directory` to MAIN_BUNDLE (e.g. RNImageEditor.MAIN_BUNDLE or ImageEditor.MAIN_BUNDLE)
+    3. Set `directory` to MAIN_BUNDLE (e.g. RNSketchImageEditor.MAIN_BUNDLE or SketchImageEditor.MAIN_BUNDLE)
 * Load image from camera
   1. Retrive photo complete path (including file extension) after snapping.
   2. Set `filename` to that path.
@@ -298,7 +298,7 @@ Note: Because native module cannot read the file in JS bundle, file path cannot 
 ### SavePreference object
 ```javascript
 {
-  folder: 'RNImageEditor',
+  folder: 'RNSketchImageEditor',
   filename: 'image',
   transparent: true,
   imageType: 'jpg',
@@ -342,7 +342,7 @@ Note: Because native module cannot read the file in JS bundle, file path cannot 
 ```javascript
 {
   filename: 'image.png',  // e.g. 'image.png' or '/storage/sdcard0/Pictures/image.png'
-  directory: '', // e.g. ImageEditor.MAIN_BUNDLE or '/storage/sdcard0/Pictures/'
+  directory: '', // e.g. SketchImageEditor.MAIN_BUNDLE or '/storage/sdcard0/Pictures/'
   mode: 'AspectFill'
 }
 ```

@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ReactNative, { View, Text, TouchableOpacity, FlatList, ViewPropTypes } from "react-native";
-import ImageEditor from "./src/ImageEditor";
+import SketchImageEditor from "./src/SketchImageEditor";
 import { requestPermissions } from "./src/handlePermissions";
 
-export default class RNImageEditor extends React.Component {
+export default class RNSketchImageEditor extends React.Component {
     static propTypes = {
         containerStyle: ViewPropTypes.style,
         canvasStyle: ViewPropTypes.style,
@@ -354,7 +354,7 @@ export default class RNImageEditor extends React.Component {
                         )}
                     </View>
                 </View>
-                <ImageEditor
+                <SketchImageEditor
                     ref={(ref) => (this._sketchCanvas = ref)}
                     style={this.props.canvasStyle}
                     strokeColor={this.state.color + (this.state.color.length === 9 ? "" : this.state.alpha)}
@@ -388,9 +388,9 @@ export default class RNImageEditor extends React.Component {
     }
 }
 
-RNImageEditor.MAIN_BUNDLE = ImageEditor.MAIN_BUNDLE;
-RNImageEditor.DOCUMENT = ImageEditor.DOCUMENT;
-RNImageEditor.LIBRARY = ImageEditor.LIBRARY;
-RNImageEditor.CACHES = ImageEditor.CACHES;
+RNSketchImageEditor.MAIN_BUNDLE = SketchImageEditor.MAIN_BUNDLE;
+RNSketchImageEditor.DOCUMENT = SketchImageEditor.DOCUMENT;
+RNSketchImageEditor.LIBRARY = SketchImageEditor.LIBRARY;
+RNSketchImageEditor.CACHES = SketchImageEditor.CACHES;
 
-export { ImageEditor };
+export { SketchImageEditor };

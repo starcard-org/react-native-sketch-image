@@ -14,15 +14,15 @@ import ReactNative, {
 } from "react-native";
 import { requestPermissions } from "./handlePermissions";
 
-const RNImageEditor = requireNativeComponent("RNImageEditor", ImageEditor, {
+const RNSketchImageEditor = requireNativeComponent("RNSketchImageEditor", SketchImageEditor, {
     nativeOnly: {
         nativeID: true,
         onChange: true
     }
 });
-const ImageEditorManager = NativeModules.RNImageEditorManager || {};
+const SketchImageEditorManager = NativeModules.RNSketchImageEditorManager || {};
 
-class ImageEditor extends React.Component {
+class SketchImageEditor extends React.Component {
     static propTypes = {
         style: ViewPropTypes.style,
         strokeColor: PropTypes.string,
@@ -117,7 +117,7 @@ class ImageEditor extends React.Component {
         this._initialized = false;
 
         this.state = {
-            text: ImageEditor.processText(props.text ? props.text.map((t) => Object.assign({}, t)) : null),
+            text: SketchImageEditor.processText(props.text ? props.text.map((t) => Object.assign({}, t)) : null),
             hasPanResponder: false
         };
     }
@@ -125,7 +125,7 @@ class ImageEditor extends React.Component {
     static getDerivedStateFromProps(nextProps, prevState) {
         if (nextProps.text) {
             return {
-                text: ImageEditor.processText(nextProps.text ? nextProps.text.map((t) => Object.assign({}, t)) : null)
+                text: SketchImageEditor.processText(nextProps.text ? nextProps.text.map((t) => Object.assign({}, t)) : null)
             };
         } else {
             return null;
@@ -150,7 +150,7 @@ class ImageEditor extends React.Component {
         this._path = null;
         UIManager.dispatchViewManagerCommand(
             this._handle,
-            UIManager.getViewManagerConfig(RNImageEditor).Commands.clear,
+            UIManager.getViewManagerConfig(RNSketchImageEditor).Commands.clear,
             []
         );
     }
@@ -174,7 +174,7 @@ class ImageEditor extends React.Component {
             });
             UIManager.dispatchViewManagerCommand(
                 this._handle,
-                UIManager.getViewManagerConfig(RNImageEditor).Commands.addPath,
+                UIManager.getViewManagerConfig(RNSketchImageEditor).Commands.addPath,
                 [data.path.id, processColor(data.path.color), data.path.width * this._screenScale, pathData]
             );
         } else {
@@ -187,7 +187,7 @@ class ImageEditor extends React.Component {
         this._paths = this._paths.filter((p) => p.path.id !== id);
         UIManager.dispatchViewManagerCommand(
             this._handle,
-            UIManager.getViewManagerConfig(RNImageEditor).Commands.deletePath,
+            UIManager.getViewManagerConfig(RNSketchImageEditor).Commands.deletePath,
             [id]
         );
     }
@@ -197,7 +197,7 @@ class ImageEditor extends React.Component {
             let fontSize = config.textShapeFontSize ? config.textShapeFontSize : 0;
             UIManager.dispatchViewManagerCommand(
                 this._handle,
-                UIManager.getViewManagerConfig(RNImageEditor).Commands.addShape,
+                UIManager.getViewManagerConfig(RNSketchImageEditor).Commands.addShape,
                 [config.shapeType, config.textShapeFontType, fontSize, config.textShapeText, config.imageShapeAsset]
             );
         }
@@ -206,7 +206,7 @@ class ImageEditor extends React.Component {
     deleteSelectedShape() {
         UIManager.dispatchViewManagerCommand(
             this._handle,
-            UIManager.getViewManagerConfig(RNImageEditor).Commands.deleteSelectedShape,
+            UIManager.getViewManagerConfig(RNSketchImageEditor).Commands.deleteSelectedShape,
             []
         );
     }
@@ -214,7 +214,7 @@ class ImageEditor extends React.Component {
     unselectShape() {
         UIManager.dispatchViewManagerCommand(
             this._handle,
-            UIManager.getViewManagerConfig(RNImageEditor).Commands.unselectShape,
+            UIManager.getViewManagerConfig(RNSketchImageEditor).Commands.unselectShape,
             []
         );
     }
@@ -222,7 +222,7 @@ class ImageEditor extends React.Component {
     increaseSelectedShapeFontsize() {
         UIManager.dispatchViewManagerCommand(
             this._handle,
-            UIManager.getViewManagerConfig(RNImageEditor).Commands.increaseShapeFontsize,
+            UIManager.getViewManagerConfig(RNSketchImageEditor).Commands.increaseShapeFontsize,
             []
         );
     }
@@ -230,7 +230,7 @@ class ImageEditor extends React.Component {
     decreaseSelectedShapeFontsize() {
         UIManager.dispatchViewManagerCommand(
             this._handle,
-            UIManager.getViewManagerConfig(RNImageEditor).Commands.decreaseShapeFontsize,
+            UIManager.getViewManagerConfig(RNSketchImageEditor).Commands.decreaseShapeFontsize,
             []
         );
     }
@@ -238,7 +238,7 @@ class ImageEditor extends React.Component {
     changeSelectedShapeText(newText) {
         UIManager.dispatchViewManagerCommand(
             this._handle,
-            UIManager.getViewManagerConfig(RNImageEditor).Commands.changeShapeText,
+            UIManager.getViewManagerConfig(RNSketchImageEditor).Commands.changeShapeText,
             [newText]
         );
     }
@@ -246,7 +246,7 @@ class ImageEditor extends React.Component {
     save(imageType, transparent, folder, filename, includeImage, includeText, cropToImageSize) {
         UIManager.dispatchViewManagerCommand(
             this._handle,
-            UIManager.getViewManagerConfig(RNImageEditor).Commands.save,
+            UIManager.getViewManagerConfig(RNSketchImageEditor).Commands.save,
             [imageType, folder, filename, transparent, includeImage, includeText, cropToImageSize]
         );
     }
@@ -257,7 +257,7 @@ class ImageEditor extends React.Component {
 
     getBase64(imageType, transparent, includeImage, includeText, cropToImageSize, callback) {
         if (Platform.OS === "ios") {
-            ImageEditorManager.transferToBase64(
+            SketchImageEditorManager.transferToBase64(
                 this._handle,
                 imageType,
                 transparent,
@@ -304,12 +304,12 @@ class ImageEditor extends React.Component {
 
                 UIManager.dispatchViewManagerCommand(
                     this._handle,
-                    UIManager.getViewManagerConfig(RNImageEditor).Commands.newPath,
+                    UIManager.getViewManagerConfig(RNSketchImageEditor).Commands.newPath,
                     [this._path.id, processColor(this._path.color), this._path.width * this._screenScale]
                 );
                 UIManager.dispatchViewManagerCommand(
                     this._handle,
-                    UIManager.getViewManagerConfig(RNImageEditor).Commands.addPoint,
+                    UIManager.getViewManagerConfig(RNSketchImageEditor).Commands.addPoint,
                     [
                         parseFloat((gestureState.x0 - this._offset.x).toFixed(2) * this._screenScale),
                         parseFloat((gestureState.y0 - this._offset.y).toFixed(2) * this._screenScale),
@@ -333,7 +333,7 @@ class ImageEditor extends React.Component {
                         );
                     UIManager.dispatchViewManagerCommand(
                         this._handle,
-                        UIManager.getViewManagerConfig(RNImageEditor).Commands.addPoint,
+                        UIManager.getViewManagerConfig(RNSketchImageEditor).Commands.addPoint,
                         [parseFloat(x * this._screenScale), parseFloat(y * this._screenScale), true]
                     );
                     this._path.data.push(`${x},${y}`);
@@ -348,7 +348,7 @@ class ImageEditor extends React.Component {
                 }
                 UIManager.dispatchViewManagerCommand(
                     this._handle,
-                    UIManager.getViewManagerConfig(RNImageEditor).Commands.endPath,
+                    UIManager.getViewManagerConfig(RNSketchImageEditor).Commands.endPath,
                     []
                 );
             },
@@ -364,7 +364,7 @@ class ImageEditor extends React.Component {
 
     render() {
         return (
-            <RNImageEditor
+            <RNSketchImageEditor
                 ref={(ref) => {
                     this._handle = ReactNative.findNodeHandle(ref);
                 }}
@@ -403,13 +403,13 @@ class ImageEditor extends React.Component {
     }
 }
 
-ImageEditor.MAIN_BUNDLE =
-    Platform.OS === "ios" ? UIManager.getViewManagerConfig(RNImageEditor).Constants.MainBundlePath : "";
-ImageEditor.DOCUMENT =
-    Platform.OS === "ios" ? UIManager.getViewManagerConfig(RNImageEditor).Constants.NSDocumentDirectory : "";
-ImageEditor.LIBRARY =
-    Platform.OS === "ios" ? UIManager.getViewManagerConfig(RNImageEditor).Constants.NSLibraryDirectory : "";
-ImageEditor.CACHES =
-    Platform.OS === "ios" ? UIManager.getViewManagerConfig(RNImageEditor).Constants.NSCachesDirectory : "";
+SketchImageEditor.MAIN_BUNDLE =
+    Platform.OS === "ios" ? UIManager.getViewManagerConfig(RNSketchImageEditor).Constants.MainBundlePath : "";
+SketchImageEditor.DOCUMENT =
+    Platform.OS === "ios" ? UIManager.getViewManagerConfig(RNSketchImageEditor).Constants.NSDocumentDirectory : "";
+SketchImageEditor.LIBRARY =
+    Platform.OS === "ios" ? UIManager.getViewManagerConfig(RNSketchImageEditor).Constants.NSLibraryDirectory : "";
+SketchImageEditor.CACHES =
+    Platform.OS === "ios" ? UIManager.getViewManagerConfig(RNSketchImageEditor).Constants.NSCachesDirectory : "";
 
-module.exports = ImageEditor;
+module.exports = SketchImageEditor;

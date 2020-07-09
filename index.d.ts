@@ -1,5 +1,5 @@
-import * as React from "react";
-import { ViewProperties, StyleProp, ViewStyle } from "react-native";
+import * as React from 'react';
+import { StyleProp, ViewProperties, ViewStyle } from 'react-native';
 
 type ImageType = "png" | "jpg";
 
@@ -72,7 +72,7 @@ export interface AddShapeConfig {
     imageShapeAsset?: string;
 }
 
-export interface ImageEditorProps {
+export interface SketchImageEditorProps {
     style?: StyleProp<ViewStyle>;
     strokeColor?: string;
     strokeWidth?: number;
@@ -111,7 +111,7 @@ export interface ImageEditorProps {
     onShapeSelectionChanged?: (isShapeSelected: boolean) => void;
 }
 
-export class ImageEditor extends React.Component<ImageEditorProps & ViewProperties> {
+export class SketchImageEditor extends React.Component<ImageEditorProps & ViewProperties> {
     clear(): void;
     undo(): number;
     addPath(data: Path): void;
@@ -161,7 +161,7 @@ export class ImageEditor extends React.Component<ImageEditorProps & ViewProperti
     static CACHES: string;
 }
 
-export interface RNImageEditorProps {
+export interface RNSketchImageEditorProps {
     containerStyle?: StyleProp<ViewStyle>;
     canvasStyle?: StyleProp<ViewStyle>;
     onStrokeStart?: () => void;
@@ -230,7 +230,7 @@ export interface RNImageEditorProps {
     shapeConfiguration?: ShapeConfiguration;
 }
 
-export default class RNImageEditor extends React.Component<RNImageEditorProps & ViewProperties> {
+export default class RNSketchImageEditor extends React.Component<RNSketchImageEditorProps & ViewProperties> {
     clear(): void;
     undo(): number;
     addPath(data: Path): void;
