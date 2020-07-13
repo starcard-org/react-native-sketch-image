@@ -921,7 +921,7 @@
     to-fast-properties "^2.0.0"
 
 "@starcard-org/react-native-sketch-canvas@file:..":
-  version "0.8.0"
+  version "0.8.3"
 
 abab@^2.0.0:
   version "2.0.0"
@@ -2248,8 +2248,9 @@ detect-newline@^2.1.0:
   integrity sha1-9B8cEL5LAOh7XxPaaAdZ8sW/0+I=
 
 diff@^3.2.0:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/diff/-/diff-3.3.1.tgz#aa8567a6eed03c531fc89d3f711cd0e5259dec75"
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/diff/-/diff-3.5.0.tgz#800c0dd1e0a8bfbc95835c202ad220fe317e5a12"
+  integrity sha512-A46qtFgd+g7pDZinpnwiRJtxbC1hpgf0uzP3iG89scHk0AUC7A1TGxf5OiiOUv/JMZR8GOt8hL900hV0bOy5xA==
 
 dom-walk@^0.1.0:
   version "0.1.1"
