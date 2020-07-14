@@ -435,12 +435,12 @@ public class SketchImageEditor extends View {
     }
 
     public void save(String format, String folder, String filename, boolean transparent, boolean includeImage, boolean includeText, boolean cropToImageSize) {
-        File f = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + File.separator + folder);
+        File f = new File(mContext.getExternalFilesDir(null) + File.separator + folder);
         boolean success = f.exists() ? true : f.mkdirs();
         if (success) {
             Bitmap bitmap = createImage(format.equals("png") && transparent, includeImage, includeText, cropToImageSize);
 
-            File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) +
+            File file = new File(mContext.getExternalFilesDir(null) +
                     File.separator + folder + File.separator + filename + (format.equals("png") ? ".png" : ".jpg"));
             try {
                 bitmap.compress(
